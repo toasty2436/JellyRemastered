@@ -131,7 +131,7 @@
          x-transition:leave="transition ease-in duration-200"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95">
-        <div class="bg-blue-600 rounded-lg p-6 w-full max-w-sm text-center space-y-4">
+        <div class="bg-neutral-900 rounded-lg p-6 w-full max-w-sm text-center space-y-4">
             <div class="w-16 h-16 mx-auto bg-blue-500/10 rounded-full flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -140,7 +140,7 @@
             <h3 class="text-xl font-semibold text-blue-400">Mobile Experience Limited</h3>
             <p class="text-gray-300">The settings page isn't fully optimized for mobile devices yet. For the best experience, please use a desktop browser.</p>
             <button @click="isMobileWarningDismissed = true" 
-                    class="bg-blue-600 hover:bg-blue-700 text-blue px-6 py-2 rounded-lg transition-colors duration-300">
+                    class="bg-neutral-900 hover:bg-blue-700 text-blue px-6 py-2 rounded-lg transition-colors duration-300">
                 I understand
             </button>
         </div>
@@ -180,14 +180,14 @@
                 x-transition:leave-end="opacity-0 transform -translate-y-2"
                 class="md:hidden mt-4 pb-4">
                 <div class="flex flex-col space-y-4">
-                    <a href="index.html" class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors">Home</a>
-                    <a href="livesports.html" class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors">Live Sports</a>
+                    <a href="index.html" class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors">Home</a>
+                    <a href="livesports.html" class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors">Live Sports</a>
                     <a href="  " target="_blank" 
-                       class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors">GitHub</a>
+                       class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors">GitHub</a>
                     <a href="https:// .com/Toasty" target="_blank" 
-                       class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors"> </a>
+                       class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors"> </a>
                     <a href="https:// .gg/s9kUZw7CqP" target="_blank" 
-                       class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors"> </a>
+                       class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors"> </a>
                 </div>
             </div>
         </div>
@@ -196,19 +196,19 @@
     <div class="flex min-h-screen pt-16">
         <!-- sidebar -->
         <div class="settings-sidebar w-64 p-6 flex flex-col">
-            <button @click="window.history.back()" class="text-left px-4 py-2 rounded-lg hover:bg-blue-600/50 transition-colors mb-2">Back</button>
+            <button @click="window.history.back()" class="text-left px-4 py-2 rounded-lg hover:bg-neutral-900/50 transition-colors mb-2">Back</button>
             <hr class="border-gray-600 mb-2">
             <div class="flex flex-col space-y-2">
                 <button 
                     @click="activeSection = 'default-source'"
-                    :class="{'bg-blue-600': activeSection === 'default-source'}"
-                    class="text-left px-4 py-2 rounded-lg hover:bg-blue-600/50 transition-colors">
+                    :class="{'bg-neutral-900': activeSection === 'default-source'}"
+                    class="text-left px-4 py-2 rounded-lg hover:bg-neutral-900/50 transition-colors">
                     Default Source
                 </button>
                 <button 
                     @click="activeSection = 'appearance'"
-                    :class="{'bg-blue-600': activeSection === 'appearance'}"
-                    class="text-left px-4 py-2 rounded-lg hover:bg-blue-600/50 transition-colors">
+                    :class="{'bg-neutral-900': activeSection === 'appearance'}"
+                    class="text-left px-4 py-2 rounded-lg hover:bg-neutral-900/50 transition-colors">
                     Appearance
                 </button>
             </div>
@@ -289,7 +289,7 @@
                             <button 
                                 @click="toggleParticles"
                                 class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300"
-                                :class="showParticles ? 'bg-blue-600' : 'bg-gray-600'">
+                                :class="showParticles ? 'bg-neutral-900' : 'bg-gray-600'">
                                 <span class="inline-block h-4 w-4 transform rounded-full bg-blue transition-transform duration-300"
                                       :class="showParticles ? 'translate-x-6' : 'translate-x-1'"></span>
                             </button>
@@ -304,7 +304,7 @@
                             <button 
                                 @click="toggleUpdateNotice"
                                 class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300"
-                                :class="showUpdateNotice ? 'bg-blue-600' : 'bg-gray-600'">
+                                :class="showUpdateNotice ? 'bg-neutral-900' : 'bg-gray-600'">
                                 <span class="inline-block h-4 w-4 transform rounded-full bg-blue transition-transform duration-300"
                                       :class="showUpdateNotice ? 'translate-x-6' : 'translate-x-1'"></span>
                             </button>
@@ -319,7 +319,7 @@
                             <button 
                                 @click="showPopupReminder = !showPopupReminder; localStorage.setItem('showPopupReminder', showPopupReminder)"
                                 class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300"
-                                :class="showPopupReminder ? 'bg-blue-600' : 'bg-gray-600'"
+                                :class="showPopupReminder ? 'bg-neutral-900' : 'bg-gray-600'"
                                 x-data="{ showPopupReminder: localStorage.getItem('showPopupReminder') !== 'false' }">
                                 <span class="inline-block h-4 w-4 transform rounded-full bg-blue transition-transform duration-300"
                                       :class="showPopupReminder ? 'translate-x-6' : 'translate-x-1'"></span>
@@ -335,7 +335,7 @@
                             <button 
                                 @click="showDonationBanner = !showDonationBanner; localStorage.setItem('showDonationBanner', showDonationBanner)"
                                 class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300"
-                                :class="showDonationBanner ? 'bg-blue-600' : 'bg-gray-600'"
+                                :class="showDonationBanner ? 'bg-neutral-900' : 'bg-gray-600'"
                                 x-data="{ showDonationBanner: localStorage.getItem('showDonationBanner') !== 'false' }">
                                 <span class="inline-block h-4 w-4 transform rounded-full bg-blue transition-transform duration-300"
                                       :class="showDonationBanner ? 'translate-x-6' : 'translate-x-1'"></span>
@@ -348,7 +348,7 @@
                                 <h3 class="font-medium">Content Language</h3>
                                 <p class="text-sm text-slate-400">Select the language for content information</p>
                             </div>
-                            <select x-model="selectedLanguage" @change="changeLanguage(selectedLanguage)" class="bg-blue-600 text-blue rounded-lg px-4 py-2 pr-8 appearance-none hover:bg-gray-700 transition-colors duration-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                            <select x-model="selectedLanguage" @change="changeLanguage(selectedLanguage)" class="bg-neutral-900 text-blue rounded-lg px-4 py-2 pr-8 appearance-none hover:bg-gray-700 transition-colors duration-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
                                 <option value="en">English</option>
                                 <option value="fr">French</option>
                             </select>

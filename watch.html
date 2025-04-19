@@ -200,7 +200,7 @@
                         <button @click="showWatchLater = true" class="nav-link flex items-center space-x-2">
                             <span>Watch Later</span>
                             <span x-show="watchLaterCount > 0" 
-                                  class="bg-blue-600 text-blue text-xs flex items-center justify-center rounded-full w-6 h-6" 
+                                  class="bg-neutral-900 text-blue text-xs flex items-center justify-center rounded-full w-6 h-6" 
                                   x-text="watchLaterCount"></span>
                         </button>
                         
@@ -238,20 +238,20 @@
                 x-transition:leave-end="opacity-0 transform -translate-y-2"
                 class="md:hidden mt-4 pb-4">
                 <div class="flex flex-col space-y-4">
-                    <a href="/" class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors">Browse</a>
+                    <a href="/" class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors">Browse</a>
                     <button @click="showWatchLater = true; mobileMenu = false" 
-                            class="flex items-center justify-between px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors">
+                            class="flex items-center justify-between px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors">
                         <span>Watch Later</span>
                         <span x-show="watchLaterCount > 0" 
-                              class="bg-blue-600 text-blue text-xs flex items-center justify-center rounded-full w-6 h-6" 
+                              class="bg-neutral-900 text-blue text-xs flex items-center justify-center rounded-full w-6 h-6" 
                               x-text="watchLaterCount"></span>
                     </button>
                     <a href="  " target="_blank" 
-                       class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors">GitHub</a>
+                       class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors">GitHub</a>
                     <a href="https:// .com/Toasty" target="_blank" 
-                       class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors"> </a>
+                       class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors"> </a>
                     <a href="https:// .gg/s9kUZw7CqP" target="_blank" 
-                       class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors"> </a>
+                       class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors"> </a>
                 </div>
             </div>
         </div>
@@ -309,7 +309,7 @@
                 <!-- left column (video player and controls) -->
                 <div class="lg:col-span-2 space-y-6">
                     <!-- video player -->
-                    <div class="bg-blue-600 rounded-lg overflow-hidden">
+                    <div class="bg-neutral-900 rounded-lg overflow-hidden">
                         <div class="relative pt-[56.25%]" id="player-container">
                             <iframe x-bind:src="currentVideoUrl" 
                                     class="absolute top-0 left-0 w-full h-full" 
@@ -320,7 +320,7 @@
                                     allowfullscreen>
                             </iframe>
                             <button @click="toggleWatchLater(content)" 
-                                    class="absolute top-2 right-2 p-1.5 md:p-2 bg-gray-900 bg-opacity-75 rounded-full hover:bg-blue-600 transition-colors duration-300"
+                                    class="absolute top-2 right-2 p-1.5 md:p-2 bg-gray-900 bg-opacity-75 rounded-full hover:bg-neutral-900 transition-colors duration-300"
                                     :class="isInWatchLater(content) ? 'text-blue-400' : 'text-blue'">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-6 md:w-6" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
@@ -357,7 +357,7 @@
 
                     <!-- episode selector -->
                     <template x-if="isShow">
-                        <div class="bg-blue-600 rounded-lg p-4 md:p-6 space-y-4">
+                        <div class="bg-neutral-900 rounded-lg p-4 md:p-6 space-y-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center space-x-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -388,7 +388,7 @@
                                     <template x-for="season in seasons" :key="season">
                                         <button @click="selectedSeason = season; updateEpisodes()"
                                                 class="px-4 py-2 rounded-lg transition-all duration-300 bluespace-nowrap"
-                                                :class="selectedSeason === season ? 'bg-blue-600 text-blue' : 'bg-gray-700 hover:bg-gray-600 text-gray-300'">
+                                                :class="selectedSeason === season ? 'bg-neutral-900 text-blue' : 'bg-gray-700 hover:bg-gray-600 text-gray-300'">
                                             <span x-text="'Season ' + season"></span>
                                         </button>
                                     </template>
@@ -451,7 +451,7 @@
                     </template>
 
                     <!-- source selector -->
-                    <div class="bg-blue-600 rounded-lg p-4 md:p-6">
+                    <div class="bg-neutral-900 rounded-lg p-4 md:p-6">
                         <div class="flex items-center space-x-3 mb-3 md:mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
@@ -468,7 +468,7 @@
                                             <button 
                                                 @click="selectedSource = source.id; updateVideoUrl()"
                                                 class="px-3 md:px-4 py-1.5 md:py-2 rounded-lg transition-all duration-300 text-sm md:text-base"
-                                                :class="selectedSource === source.id ? 'bg-blue-600 text-blue' : 'bg-gray-700 hover:bg-gray-600 text-gray-200'"
+                                                :class="selectedSource === source.id ? 'bg-neutral-900 text-blue' : 'bg-gray-700 hover:bg-gray-600 text-gray-200'"
                                                 x-text="source.name">
                                             </button>
                                         </template>
@@ -483,7 +483,7 @@
                                             <button 
                                                 @click="selectedSource = source.id; updateVideoUrl()"
                                                 class="px-3 md:px-4 py-1.5 md:py-2 rounded-lg transition-all duration-300 text-sm md:text-base"
-                                                :class="selectedSource === source.id ? 'bg-blue-600 text-blue' : 'bg-gray-700 hover:bg-gray-600 text-gray-200'"
+                                                :class="selectedSource === source.id ? 'bg-neutral-900 text-blue' : 'bg-gray-700 hover:bg-gray-600 text-gray-200'"
                                                 x-text="source.name">
                                             </button>
                                         </template>
@@ -494,7 +494,7 @@
                     </div>
 
                     <!-- torrent download section -->
-                    <div class="mt-8 bg-blue-600 rounded-lg p-6">
+                    <div class="mt-8 bg-neutral-900 rounded-lg p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center space-x-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -538,7 +538,7 @@
                                             <span x-text="torrent.seeders || '0'"></span>
                                         </div>
                                     </div>
-                                    <a :href="torrent.magnet" class="block w-full text-center bg-blue-600 text-blue text-sm font-medium rounded-md py-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                                    <a :href="torrent.magnet" class="block w-full text-center bg-neutral-900 text-blue text-sm font-medium rounded-md py-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
                                         Download Torrent
                                     </a>
                                 </div>
@@ -550,7 +550,7 @@
                 <!-- right column (content details) -->
                 <div class="space-y-6">
                     <!-- overview -->
-                    <div class="bg-blue-600 rounded-lg p-6">
+                    <div class="bg-neutral-900 rounded-lg p-6">
                         <div class="flex items-center justify-between section-header" @click="toggleSection('overview')">
                             <div class="flex items-center space-x-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -568,7 +568,7 @@
                     </div>
 
                     <!-- details -->
-                    <div class="bg-blue-600 rounded-lg p-6">
+                    <div class="bg-neutral-900 rounded-lg p-6">
                         <div class="flex items-center justify-between section-header" @click="toggleSection('details')">
                             <div class="flex items-center space-x-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -668,7 +668,7 @@
                     </div>
 
                     <!-- cast -->
-                    <div class="bg-blue-600 rounded-lg p-6">
+                    <div class="bg-neutral-900 rounded-lg p-6">
                         <div class="flex items-center justify-between section-header" @click="toggleSection('cast')">
                             <div class="flex items-center space-x-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -731,7 +731,7 @@
                     </div>
 
                     <!-- production info -->
-                    <div class="bg-blue-600 rounded-lg p-6">
+                    <div class="bg-neutral-900 rounded-lg p-6">
                         <div class="flex items-center justify-between section-header" @click="toggleSection('production')">
                             <div class="flex items-center space-x-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -786,7 +786,7 @@
                     </div>
 
                     <!-- trailers -->
-                    <div class="bg-blue-600 rounded-lg p-6">
+                    <div class="bg-neutral-900 rounded-lg p-6">
                         <div class="flex items-center justify-between section-header" @click="toggleSection('trailers')">
                             <div class="flex items-center space-x-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -824,7 +824,7 @@
                     <template x-for="item in similarContent" :key="item.id">
                         <div class="relative card-hover">
                             <a :href="'watch.html?id=' + item.id + '&type=' + contentType"
-                               class="block rounded-lg overflow-hidden bg-blue-600 aspect-[2/3]">
+                               class="block rounded-lg overflow-hidden bg-neutral-900 aspect-[2/3]">
                                 <div class="relative h-full">
                                     <img
                                         :src="'https://image.tmdb.org/t/p/w500' + item.poster_path"
@@ -846,7 +846,7 @@
                                 </div>
                             </a>
                             <button @click.stop="toggleWatchLater(item)"
-                                    class="absolute top-2 right-2 p-1.5 md:p-2 bg-gray-900 bg-opacity-75 rounded-full hover:bg-blue-600 transition-all duration-300"
+                                    class="absolute top-2 right-2 p-1.5 md:p-2 bg-gray-900 bg-opacity-75 rounded-full hover:bg-neutral-900 transition-all duration-300"
                                     :class="isInWatchLater(item) ? 'text-blue-400' : 'text-blue'">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
@@ -950,7 +950,7 @@
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     <template x-for="item in watchLaterItems" :key="item.id">
-                        <div class="relative bg-blue-600 rounded-lg overflow-hidden">
+                        <div class="relative bg-neutral-900 rounded-lg overflow-hidden">
                             <a :href="'watch.html?id=' + item.id + '&type=' + item.type"
                                class="block">
                                 <img :src="'https://image.tmdb.org/t/p/w500' + item.poster_path" 
@@ -962,7 +962,7 @@
                                 </div>
                             </a>
                             <button @click="toggleWatchLater(item)"
-                                    class="absolute top-2 right-2 p-2 bg-gray-900 bg-opacity-75 rounded-full hover:bg-blue-600 transition-all duration-300 text-blue-400">
+                                    class="absolute top-2 right-2 p-2 bg-gray-900 bg-opacity-75 rounded-full hover:bg-neutral-900 transition-all duration-300 text-blue-400">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
                                 </svg>
@@ -995,7 +995,7 @@
                 <p class="text-gray-400 mb-6">This action cannot be undone. Are you sure you want to remove all items from your watch later list?</p>
                 <div class="flex space-x-3 justify-center">
                     <button @click="showClearConfirm = false" 
-                            class="px-4 py-2 bg-blue-600 hover:bg-gray-700 rounded-lg transition-colors duration-300">
+                            class="px-4 py-2 bg-neutral-900 hover:bg-gray-700 rounded-lg transition-colors duration-300">
                         Cancel
                     </button>
                     <button @click="doClearWatchLater()" 

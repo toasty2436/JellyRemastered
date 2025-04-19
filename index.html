@@ -306,10 +306,10 @@
       @keydown.meta.k.prevent="$refs.searchInput.focus()"
       @keydown.ctrl.k.prevent="$refs.searchInput.focus()">
     <div x-data="{ showPopup: localStorage.getItem('showPopupReminder') !== 'false' }" x-show="showPopup" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
-        <div class="bg-blue-600 text-blue p-6 rounded-lg shadow-lg max-w-md w-full">
+        <div class="bg-neutral-900 text-blue p-6 rounded-lg shadow-lg max-w-md w-full">
             
             <p class="mb-4">Welcome to <b>JellyReborn!❤️</b> to make this popup not appear anymore go to ->  <a href="settings.html" class="text-blue-400 underline">Settings > Appearance</a>.</p>
-            <button @click="showPopup = false" class="bg-blue-600 text-blue w-full px-4 py-2 rounded hover:bg-blue-700 transition">Got it!</button>
+            <button @click="showPopup = false" class="bg-neutral-900 text-blue w-full px-4 py-2 rounded hover:bg-blue-700 transition">Got it!</button>
         </div>
     </div>
     <div x-show="localStorage.getItem('showParticles') !== 'false'" id="particles-js" class="fixed inset-0 pointer-events-none z-0"></div>
@@ -340,7 +340,7 @@
                         <button @click="showWatchLater = true" class="nav-link flex items-center space-x-2">
                             <span></span>
                             <span x-show="watchLaterCount > 0" 
-                                  class="bg-blue-600 text-blue text-xs flex items-center justify-center rounded-full w-6 h-6" 
+                                  class="bg-neutral-900 text-blue text-xs flex items-center justify-center rounded-full w-6 h-6" 
                                   x-text="watchLaterCount"></span>
                         </button>
                         <a href="  " target="_blank" class="nav-link flex items-center">
@@ -362,7 +362,7 @@
                                    x-model="searchQuery" 
                                    @keyup.debounce.300ms="searchContent()"
                                    placeholder="Search..." 
-                                   class="search-input bg-blue-600 rounded-full px-6 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 w-64">
+                                   class="search-input bg-neutral-900 rounded-full px-6 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 w-64">
                             <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center space-x-1 text-gray-400 pointer-events-none select-none">
                                 <span class="text-xs bg-gray-700 rounded px-1.5 py-0.5">⌘</span>
                                 <span class="text-xs bg-gray-700 rounded px-1.5 py-0.5">K</span>
@@ -395,18 +395,18 @@
                 class="md:hidden mt-4 pb-4">
                 <div class="flex flex-col space-y-4">
                     <button @click="currentTab = currentTab === 'movies' ? 'shows' : 'movies'; mobileMenu = false" 
-                            class="text-left px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors">
+                            class="text-left px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors">
                         <span x-text="currentTab === 'movies' ? 'Switch to TV Shows' : 'Switch to Movies'"></span>
                     </button>
-                    <a href="livesports.html" class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors">Live Sports</a>
+                    <a href="livesports.html" class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors">Live Sports</a>
                     <button @click="showWatchLater = true; mobileMenu = false" 
-                            class="flex items-center justify-between px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors">
+                            class="flex items-center justify-between px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors">
                         <span>Watch Later</span>
                         <span x-show="watchLaterCount > 0" 
-                              class="bg-blue-600 text-blue text-xs flex items-center justify-center rounded-full w-6 h-6" 
+                              class="bg-neutral-900 text-blue text-xs flex items-center justify-center rounded-full w-6 h-6" 
                               x-text="watchLaterCount"></span>
                     </button>
-                    <a href="settings.html" class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors flex items-center space-x-2">
+                    <a href="settings.html" class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors flex items-center space-x-2">
                         <span>Settings</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -414,11 +414,11 @@
                         </svg>
                     </a>
                     <a href="  " target="_blank" 
-                       class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors">GitHub</a>
+                       class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors">GitHub</a>
                     <a href="https:// .com/Toasty" target="_blank" 
-                       class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors"> </a>
+                       class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors"> </a>
                     <a href="https:// .gg/s9kUZw7CqP" target="_blank" 
-                       class="px-4 py-2 hover:bg-blue-600 rounded-lg transition-colors"> </a>
+                       class="px-4 py-2 hover:bg-neutral-900 rounded-lg transition-colors"> </a>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                     <div class="relative">
                         <select x-model="selectedGenre"
                                 @change="applyFilters()"
-                                class="bg-blue-600 text-blue rounded-lg px-4 py-2 pr-8 appearance-none hover:bg-gray-700 transition-colors duration-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                                class="bg-neutral-900 text-blue rounded-lg px-4 py-2 pr-8 appearance-none hover:bg-gray-700 transition-colors duration-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
                             <option value="">All Genres</option>
                             <template x-for="genre in genres" :key="genre.id">
                                 <option :value="genre.id" x-text="genre.name"></option>
@@ -460,7 +460,7 @@
                     <div class="relative">
                         <select x-model="minRating"
                                 @change="applyFilters()"
-                                class="bg-blue-600 text-blue rounded-lg px-4 py-2 pr-8 appearance-none hover:bg-gray-700 transition-colors duration-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                                class="bg-neutral-900 text-blue rounded-lg px-4 py-2 pr-8 appearance-none hover:bg-gray-700 transition-colors duration-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
                             <option value="">Any Rating</option>
                             <option value="8">8+ ⭐</option>
                             <option value="7">7+ ⭐</option>
@@ -478,7 +478,7 @@
                     <div class="relative">
                         <select x-model="yearRange"
                                 @change="applyFilters()"
-                                class="bg-blue-600 text-blue rounded-lg px-4 py-2 pr-8 appearance-none hover:bg-gray-700 transition-colors duration-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                                class="bg-neutral-900 text-blue rounded-lg px-4 py-2 pr-8 appearance-none hover:bg-gray-700 transition-colors duration-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
                             <option value="">Any Year</option>
                             <option value="2020,2024">2020s</option>
                             <option value="2010,2019">2010s</option>
@@ -500,7 +500,7 @@
                     <div class="relative">
                         <select x-model="selectedLanguage"
                                 @change="applyFilters()"
-                                class="bg-blue-600 text-blue rounded-lg px-4 py-2 pr-8 appearance-none hover:bg-gray-700 transition-colors duration-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                                class="bg-neutral-900 text-blue rounded-lg px-4 py-2 pr-8 appearance-none hover:bg-gray-700 transition-colors duration-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
                             <option value="">All Languages</option>
                             <option value="en">English</option>
                             <option value="fr">French</option>
@@ -521,7 +521,7 @@
                     <div class="relative">
                         <select x-model="sortBy"
                                 @change="applyFilters()"
-                                class="bg-blue-600 text-blue rounded-lg px-4 py-2 pr-8 appearance-none hover:bg-gray-700 transition-colors duration-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                                class="bg-neutral-900 text-blue rounded-lg px-4 py-2 pr-8 appearance-none hover:bg-gray-700 transition-colors duration-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
                             <option value="popularity.desc">Most Popular</option>
                             <option value="revenue.desc">Highest Revenue</option>
                             <option value="vote_count.desc">Most Reviewed</option>
@@ -536,25 +536,25 @@
                     <!-- active filters display -->
                     <div class="flex flex-wrap gap-2">
                         <template x-if="selectedGenre">
-                            <span class="bg-blue-600 text-blue px-3 py-1 rounded-full text-sm flex items-center gap-2">
+                            <span class="bg-neutral-900 text-blue px-3 py-1 rounded-full text-sm flex items-center gap-2">
                                 <span x-text="getGenreName(selectedGenre)"></span>
                                 <button @click="selectedGenre = ''; applyFilters()" class="hover:text-gray-300">×</button>
                             </span>
                         </template>
                         <template x-if="minRating">
-                            <span class="bg-blue-600 text-blue px-3 py-1 rounded-full text-sm flex items-center gap-2">
+                            <span class="bg-neutral-900 text-blue px-3 py-1 rounded-full text-sm flex items-center gap-2">
                                 <span x-text="minRating + '+ ⭐'"></span>
                                 <button @click="minRating = ''; applyFilters()" class="hover:text-gray-300">×</button>
                             </span>
                         </template>
                         <template x-if="yearRange">
-                            <span class="bg-blue-600 text-blue px-3 py-1 rounded-full text-sm flex items-center gap-2">
+                            <span class="bg-neutral-900 text-blue px-3 py-1 rounded-full text-sm flex items-center gap-2">
                                 <span x-text="getYearRangeName(yearRange)"></span>
                                 <button @click="yearRange = ''; applyFilters()" class="hover:text-gray-300">×</button>
                             </span>
                         </template>
                         <template x-if="selectedLanguage">
-                            <span class="bg-blue-600 text-blue px-3 py-1 rounded-full text-sm flex items-center gap-2">
+                            <span class="bg-neutral-900 text-blue px-3 py-1 rounded-full text-sm flex items-center gap-2">
                                 <span x-text="getLanguageName(selectedLanguage)"></span>
                                 <button @click="selectedLanguage = ''; applyFilters()" class="hover:text-gray-300">×</button>
                             </span>
@@ -587,7 +587,7 @@
                             item: item
                         }">
                         <a :href="'watch.html?id=' + item.id + '&type=' + (currentTab === 'movies' ? 'movie' : 'tv')"
-                           class="block rounded-lg overflow-hidden bg-blue-600 aspect-[2/3]">
+                           class="block rounded-lg overflow-hidden bg-neutral-900 aspect-[2/3]">
                             <div class="relative h-full">
                                 <img :src="'https://image.tmdb.org/t/p/w500' + item.poster_path" 
                                      :alt="item.title || item.name"
@@ -605,7 +605,7 @@
                             </div>
                         </a>
                         <button @click.stop="toggleWatchLater(item)"
-                                class="absolute top-2 right-2 p-1.5 md:p-2 bg-gray-900 bg-opacity-75 rounded-full hover:bg-blue-600 transition-all duration-300"
+                                class="absolute top-2 right-2 p-1.5 md:p-2 bg-gray-900 bg-opacity-75 rounded-full hover:bg-neutral-900 transition-all duration-300"
                                 :class="isInWatchLater(item) ? 'text-blue-400' : 'text-blue'">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
@@ -619,7 +619,7 @@
             <div class="mt-12 flex items-center justify-center space-x-4">
                 <button @click="currentPage > 1 && changePage(currentPage - 1)"
                         :class="currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-700'"
-                        class="bg-blue-600 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                        class="bg-neutral-900 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
                     </svg>
@@ -629,7 +629,7 @@
                 <span class="text-gray-400">Page <span class="text-blue font-medium" x-text="currentPage"></span></span>
 
                 <button @click="changePage(currentPage + 1)"
-                        class="bg-blue-600 hover:bg-gray-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                        class="bg-neutral-900 hover:bg-gray-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2">
                     <span>Next</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
@@ -701,7 +701,7 @@
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     <template x-for="item in watchLaterItems" :key="item.id">
-                        <div class="relative bg-blue-600 rounded-lg overflow-hidden">
+                        <div class="relative bg-neutral-900 rounded-lg overflow-hidden">
                             <a :href="'watch.html?id=' + item.id + '&type=' + item.type"
                                class="block">
                                 <img :src="'https://image.tmdb.org/t/p/w500' + item.poster_path" 
@@ -713,7 +713,7 @@
                                 </div>
                             </a>
                             <button @click="toggleWatchLater(item)"
-                                    class="absolute top-2 right-2 p-2 bg-gray-900 bg-opacity-75 rounded-full hover:bg-blue-600 transition-all duration-300 text-blue-400">
+                                    class="absolute top-2 right-2 p-2 bg-gray-900 bg-opacity-75 rounded-full hover:bg-neutral-900 transition-all duration-300 text-blue-400">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
                                 </svg>
@@ -746,7 +746,7 @@
                 <p class="text-gray-400 mb-6">This action cannot be undone. Are you sure you want to remove all items from your watch later list?</p>
                 <div class="flex space-x-3 justify-center">
                     <button @click="showClearConfirm = false" 
-                            class="px-4 py-2 bg-blue-600 hover:bg-gray-700 rounded-lg transition-colors duration-300">
+                            class="px-4 py-2 bg-neutral-900 hover:bg-gray-700 rounded-lg transition-colors duration-300">
                         Cancel
                     </button>
                     <button @click="doClearWatchLater()" 
@@ -764,7 +764,7 @@
         @click.away="$store.contextMenu.show = false"
         @keydown.escape.window="$store.contextMenu.show = false"
         :style="`position: fixed; left: ${$store.contextMenu.x}px; top: ${$store.contextMenu.y}px`"
-        class="bg-blue-600 border border-gray-700 rounded-lg shadow-xl z-50 w-56 py-2 animate-fade-in"
+        class="bg-neutral-900 border border-gray-700 rounded-lg shadow-xl z-50 w-56 py-2 animate-fade-in"
         x-cloak>
         
         <div class="px-4 py-2 border-b border-gray-700">
@@ -825,7 +825,7 @@
         x-transition:leave="transition ease-in duration-200"
         x-transition:leave-start="opacity-100 transform translate-y-0"
         x-transition:leave-end="opacity-0 transform translate-y-8"
-        class="fixed bottom-4 right-4 bg-blue-600 text-blue px-6 py-3 rounded-lg shadow-xl z-[100] flex items-center gap-2"
+        class="fixed bottom-4 right-4 bg-neutral-900 text-blue px-6 py-3 rounded-lg shadow-xl z-[100] flex items-center gap-2"
         style="pointer-events: none;">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -1229,7 +1229,7 @@
     x-transition:leave="transition ease-in duration-300"
     x-transition:leave-start="opacity-100 transform translate-y-0"
     x-transition:leave-end="opacity-0 transform translate-y-10"
-    class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-blue rounded-full p-4 shadow-lg cursor-pointer transition-all duration-300 hover:scale-110 z-50">
+    class="fixed bottom-8 right-8 bg-neutral-900 hover:bg-blue-700 text-blue rounded-full p-4 shadow-lg cursor-pointer transition-all duration-300 hover:scale-110 z-50">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
     </svg>

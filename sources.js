@@ -1,12 +1,12 @@
 const availableSources = [
     
     {
-        id: 'vidsrcrip',
+        id: 'vidify',
         name: 'JellyVideo',
         isFrench: false,
         urls: {
-            movie: 'https://vidsrc.rip/embed/movie/{id}',
-            tv: 'https://vidsrc.rip/embed/tv/{id}/{season}/{episode}'
+            movie: 'https://vidify.top/embed/movie/{id}',
+            tv: 'https://vidify.top/embed/tv/{id}/{season}/{episode}'
         }
     },
     
